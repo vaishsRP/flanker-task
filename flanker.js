@@ -114,18 +114,19 @@ timeline.push(debrief);
 jsPsych.run(timeline);
 
 function sendDataToGoogleSheets(uniqueID, responseTime, accuracy) {
-  const url = 'https://script.google.com/macros/s/AKfycby7aDk9P0Ue7iGFDZkWUhysFGsBq3_w07znOIiM0U41oowGIwzMA3Udr8y-cm3ZzpWp/exec'; // Replace with your Google Apps Script URL
+  const url = 'YOUR_DEPLOYMENT_URL'; // Replace with your Google Apps Script web app URL
+  
   const data = {
-    "ID": ID,
+    "ID": uniqueID,
     "responseTime": responseTime,
     "accuracy": accuracy
   };
 
   fetch(url, {
     method: 'POST',
-    body: JSON.stringify(data),
+    body: JSON.stringify(data), // Ensure data is being sent as JSON
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json', // Set the correct content type
     },
   })
   .then(response => response.json())
