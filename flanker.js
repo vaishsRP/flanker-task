@@ -114,9 +114,9 @@ timeline.push(debrief);
 jsPsych.run(timeline);
 
 function sendDataToGoogleSheets(uniqueID, responseTime, accuracy) {
-  const url = 'https://script.google.com/macros/s/AKfycbwNxBLVMOZTdQPzumPxwRRCbaFRZkwikJwvuZAgCTC-u1k7roAODUtLOSwNAFHtYoMe/exec'; // Replace with your Google Apps Script URL
+  const url = 'https://script.google.com/macros/s/AKfycby7aDk9P0Ue7iGFDZkWUhysFGsBq3_w07znOIiM0U41oowGIwzMA3Udr8y-cm3ZzpWp/exec'; // Replace with your Google Apps Script URL
   const data = {
-    "ID": uniqueID,
+    "ID": ID,
     "responseTime": responseTime,
     "accuracy": accuracy
   };
