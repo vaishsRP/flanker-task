@@ -114,7 +114,7 @@ timeline.push(debrief);
 jsPsych.run(timeline);
 
 function sendDataToGoogleSheets(uniqueID, responseTime, accuracy) {
-  const url = 'YOUR_DEPLOYMENT_URL'; // Replace with your Google Apps Script web app URL
+  const url = 'https://script.google.com/macros/s/AKfycbygZUU3JfIeDfRPugQlTYUze-Xao34ZAVfDy3KvNwKx33ibKoc_-UTqW9Dfe1JKyFoy/exec'; // Replace with your Google Apps Script web app URL
   
   const data = {
     "ID": uniqueID,
